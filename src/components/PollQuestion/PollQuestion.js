@@ -37,7 +37,7 @@ class PollQuestion extends Component {
 
   render() {
     if (this.state.toHome === true) {
-      return <Redirect to='/'></Redirect>
+      return <Redirect to={`/question/${this.props.question.id}`}></Redirect>
     }
 
     const { question } = this.props;
