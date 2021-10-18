@@ -1,0 +1,166 @@
+.poll-result-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+.option-vote-container {
+  display: flex;
+  flex: 1 1 100%;
+  margin: 5px;
+ }
+
+ .option-vote-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vh;
+  width: -webkit-fill-available;
+  width: stretch;
+  max-width: 340px;
+  height: 120px;
+  background: #F2FFFC;
+  border: 1px solid #C7DCD7;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0.5em;
+ }
+
+ .voted {
+  background: #EEDE4D;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: none;
+ }
+
+ .voted > span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 11px;
+  color: #FFFFFF;
+ }
+
+ .option-text {
+  display: flex;
+  align-self: flex-start;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  width: 100vh;
+  width: -webkit-fill-available;
+  width: stretch;
+  height: 44px;
+
+  color: #496C64
+ }
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.progress-bar-base {
+  width: 230px;
+  height: 20px;
+  background: #E3F0ED;
+  border-radius: 20px;
+}
+
+.progress-bar-text {
+  margin: unset;
+  z-index: 1;
+  position: absolute;
+  width: inherit;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.progress-bar-filled {
+  position: relative;
+  width: 0px;
+  height: 20px;
+  display: block;
+  background: #2CEABE;
+  border-radius: 20px;
+  animation: move 2s linear infinite;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+}
+
+.progress-bar-base > span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.progress-text {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  .poll-result-container {
+    margin-top: 10px;
+  }
+  .option-vote-container-content {
+    max-width: 250px;
+  }
+}

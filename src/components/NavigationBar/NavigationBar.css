@@ -1,0 +1,147 @@
+.nav-logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 34px;
+  margin-right: 70px;
+  align-self: center;
+}
+
+.nav-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 60px;
+  width: 100%;
+  background: #FAFFFE;
+  background-blend-mode: hard-light;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+
+.nav-list {
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.nav-item {
+  position: relative;
+  width: 140px;
+  height: 45px;
+}
+
+.nav-item-text {
+  position: absolute;
+  width: 140px;
+  height: 45px;
+  left: 0px;
+  top: 0px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: unset;
+}
+
+.nav-list-left {
+  display: flex;
+}
+
+.nav-list-right {
+  display: flex;
+  align-self: flex-end;
+}
+
+.nav-item-welcome {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-btn {
+  cursor: pointer;
+}
+
+.nav-item-text.active {
+  width: 140px;
+  height: 59px;
+
+  background: #bdd4cf3d;
+  box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
+  border-radius: 10%;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-bar {
+    min-height: 45px;
+    border-radius: 5px;
+    flex-wrap: wrap-reverse;
+  }
+
+  .nav-item {
+    position: relative;
+    width: 100px;
+    height: 45px;
+  }
+
+  .nav-item-text {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+
+    font-size: 16px;
+  }
+
+  .nav-item-text.active {
+    width: 100px;
+    height: 44px;
+  }
+
+  .nav-list-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-list-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-item-welcome {
+    width: 250px;
+    height: 45px;
+    
+    font-size: 16px;
+  }
+}

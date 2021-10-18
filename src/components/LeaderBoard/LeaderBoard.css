@@ -1,0 +1,238 @@
+.leaderboard-container {
+  width: 100%;
+  max-width: 500px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding-left: 20px;
+  vertical-align: middle;
+  background: #FAFAFA;
+  border-radius: inherit;
+}
+
+.leaderboard-content-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0 5px 0;
+  padding: 2px;
+}
+
+.leaderboard-ranking {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-right: -20px;
+  border: none;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.rank-gold {
+  background: #faea5a;
+}
+
+.rank-silver {
+  background: #d8d7d7;
+}
+
+.rank-bronze {
+  background: #d0aa62;
+}
+
+.rank-other {
+  background: #b6eade;
+}
+
+.leaderboard-ranking > span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #FFFFFF;
+ }
+
+.leaderboard-content-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+  width: 100%;
+}
+
+.leaderboard-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit:cover;
+  border-radius:50%;
+
+  align-self: center;
+}
+
+.leaderboard-user-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.leaderboard-user-summary-name {
+  margin: unset;
+  align-self: self-start;
+  
+}
+
+.leaderboard-question-summary-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal-divider {
+  min-width: 120px;
+  width: 95%;
+  align-self: center;
+  border: 1px solid #E5E5E5;
+  background: #ededed;
+  transform: rotate(0deg);
+}
+
+.leaderboard-score-container {
+  width: 80px;
+  height: 80px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  align-self: center;
+}
+
+.leaderboard-score-container-header {
+  width: 80px;
+  height: 25px;
+  background: #FAFAFA;
+  border-radius: 1px;
+}
+
+.leaderboard-score {
+  display: flex;
+  justify-content: center;
+  height: 55px;
+  align-items: center;
+}
+
+.leaderboard-score > span {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  background: #73BEAD;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+ }
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  .leaderboard-container {
+    max-width: 350px;
+  }
+
+  .leaderboard-content-container {
+    padding: 5px;
+    height: 80px;
+  }
+
+  .leaderboard-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .leaderboard-user-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .leaderboard-user-summary-name {
+    font-size: smaller;
+  }
+
+  .leaderboard-question-summary-container {
+    font-size: smaller;
+  }
+
+  .horizontal-divider {
+    min-width: 120px;
+    width: 95%;
+  }
+
+  .leaderboard-score-container {
+    width: 60px;
+    height: 60px;
+  
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    align-self: center;
+  }
+
+  .leaderboard-score-container-header {
+    width: 60px;
+    height: 15px;
+    background: #FAFAFA;
+    border-radius: 1px;
+    font-size: smaller;
+  }
+
+  .leaderboard-score {
+    height: 45px;
+  }
+}
+
+
+

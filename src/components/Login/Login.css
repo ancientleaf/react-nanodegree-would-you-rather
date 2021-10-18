@@ -1,0 +1,139 @@
+.signin-container {
+  width: 100%;
+  max-width: 500px;
+  min-height: 400px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-header{
+  height: 50px;
+  width: inherit;
+  background: #FAFAFA;
+}
+
+.signin-header > h3{
+  margin: 0px;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.signin-header > p{
+  margin: 0px;
+  font-size: 12px;
+  padding-top: 4px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .signin-logo {
+    animation: App-logo-spin infinite 20s linear;
+    width: 80px;
+    height: 80px;
+    margin-top: 70px;
+  }
+}
+
+.signin-dropdown {
+  width: 100%;
+  max-width: 460px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.signin-dropdown > label{
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #73BEAD;
+}
+
+.signin-dropdown > select {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.signin-btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  
+  background: #31D9B2;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  color: #FAFFFE;
+  border-radius: 5px;
+  align-items: center;
+  border: none;
+  text-decoration: unset;
+  cursor: pointer;
+}
+
+.signin-btn:hover{
+  background: #25c49f;
+  color: #c9c9c9;
+}
+
+.signin-btn:disabled{
+  background: #cdcdcd;
+  border: 1px solid #cdcdcd;
+  color: #E3F0ED;
+  cursor: unset;
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  .signin-container {
+    width: 350px;
+    min-height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .signin-dropdown {
+    width: 320px;
+    padding-top: 35px;
+  }
+
+  .signin-dropdown > select {
+    height: 25px;
+    margin-top: 20px;
+  }
+
+}
