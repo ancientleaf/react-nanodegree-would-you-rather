@@ -1,7 +1,7 @@
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 
 import { saveQuestionAnswer, saveQuestion } from './../util/api';
-import { saveQuestionToUserAction, saveVoteByUserAction } from './UsersAction';
+import { saveQuestionToUserAction } from './UsersAction';
 
 const LOAD_ALL_QUESTIONS = 'LOAD_ALL_QUESTIONS';
 const SAVE_QUESTION_ANSWER = 'SAVE_QUESTIONS_ANSWER';
@@ -18,7 +18,6 @@ function submitQuestionAnswerAction(questionId, selectedOption) {
       authedUser: getstate().authedUser
     }).then(() => {
       dispatch(saveQuestionAnswerAction(questionId, selectedOption, getstate().authedUser));
-      dispatch(saveVoteByUserAction(questionId, selectedOption, getstate().authedUser))
     }
     ).then(
       () => {

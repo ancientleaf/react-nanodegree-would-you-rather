@@ -1,10 +1,11 @@
-import { LOAD_ALL_USERS, SAVE_QUESTION_TO_USER, SAVE_USER_VOTE } from './../actions/UsersAction';
+import { SAVE_QUESTION_ANSWER } from '../actions/QuestionsAction';
+import { LOAD_ALL_USERS, SAVE_QUESTION_TO_USER } from './../actions/UsersAction';
 
 function usersReducer(state = {}, action) {
   switch(action.type) {
     case LOAD_ALL_USERS:
       return action.users
-    case SAVE_USER_VOTE:
+    case SAVE_QUESTION_ANSWER:
       return {
         ...state,
         [action.authedUser]: {
