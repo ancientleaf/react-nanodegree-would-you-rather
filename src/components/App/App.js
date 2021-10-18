@@ -17,7 +17,7 @@ import NotFound from '../NotFound/NotFound';
 class App extends Component {
 
   componentDidMount() {
-    this.props.dispatch(initialiseAppAction());
+    this.props.initialiseApp();
   }
 
   render() {
@@ -54,4 +54,10 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+function mapDispatchTOProps(dispatch) {
+  return {
+    initialiseApp: () => dispatch(initialiseAppAction())
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchTOProps)(App);
