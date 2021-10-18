@@ -1,32 +1,25 @@
 import { SAVE_QUESTION_ANSWER } from '../actions/QuestionsAction';
 import { LOAD_ALL_USERS, SAVE_QUESTION_TO_USER } from './../actions/UsersAction';
+import produce from 'immer';
 
-function usersReducer(state = {}, action) {
+// Reducer with initial state
+const INITIAL_STATE = {};
+
+const usersReducer = produce( (draft, action) => {
   switch(action.type) {
-    case LOAD_ALL_USERS:
-      return action.users
-    case SAVE_QUESTION_ANSWER:
-      return {
-        ...state,
-        [action.authedUser]: {
-          ...state[action.authedUser],
-          answers: {
-            ...state[action.authedUser].answers,
-            [action.questionId]: action.selectedOption
-          }
-        }
-      }
+    case LOAD_ALL_USERS: {
+      return action.users;
+    }
+    case SAVE_QUESTION_ANSWER: {
+      draft[action.authedUser].answers[action.questionId] = action.selectedOption
+      break;
+    }
     case SAVE_QUESTION_TO_USER:
-      return {
-        ...state,
-        [action.authedUser]: {
-          ...state[action.authedUser],
-          questions: state[action.authedUser].questions.concat([action.questionId])
-        }
-      }
+      draft[action.authedUser].questions.push(action.questionId);
+      break;
     default:
-      return state
+      break;
   }
-}
+}, INITIAL_STATE);
 
 export {usersReducer};

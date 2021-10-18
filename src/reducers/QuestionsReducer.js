@@ -1,28 +1,22 @@
 import { ADD_QUESTION, LOAD_ALL_QUESTIONS, SAVE_QUESTION_ANSWER } from "../actions/QuestionsAction";
+import produce from 'immer';
 
-function questionsReducer(state = {}, action) {
+// Reducer with initial state
+const INITIAL_STATE = {};
+
+const questionsReducer = produce( (draft, action) => {
   switch(action.type) {
     case LOAD_ALL_QUESTIONS:
-      return action.questions
+      return action.questions;
     case SAVE_QUESTION_ANSWER:
-      return {
-        ...state,
-        [action.questionId]: {
-          ...state[action.questionId],
-          [action.selectedOption]: {
-            ...state[action.questionId][action.selectedOption],
-            votes: state[action.questionId][action.selectedOption].votes.concat([action.authedUser])
-          }
-        }
-      }
+      draft[action.questionId][action.selectedOption].votes.push(action.authedUser);
+      break;
     case ADD_QUESTION:
-      return {
-        ...state,
-        [action.newQuestion.id]: action.newQuestion 
-      }
+      draft[action.newQuestion.id] = action.newQuestion 
+      break;
     default:
-      return state
+      break;
   }
-}
+}, INITIAL_STATE);
 
 export { questionsReducer }
